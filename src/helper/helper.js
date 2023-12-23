@@ -1,5 +1,4 @@
 import axios from "axios";
-import { QUESTIONS, RESULT } from "../redux/ApiUrl";
 
 export function attemptQuestion(question,result){
     const exportedData = {
@@ -11,7 +10,6 @@ export function attemptQuestion(question,result){
 
 export function displayQuestionsWithAttempts(questions, correctAnswers, userAnswers) {
     const result_q = [];
-  
     questions.forEach((question, index) => {
       const formattedQuestion = {
         question: question.question,
@@ -40,9 +38,8 @@ export async function getServerData(url,callback){
     const data = await (await (axios.get(url)))?.data.qus
     return callback ? callback(data) : data
 }
+
 export async function postServerData(url,result,callback){
     const data = await (await (axios.get(url,result)))?.data
     return callback ? callback(data) : data
 }
-
-getServerData(RESULT)

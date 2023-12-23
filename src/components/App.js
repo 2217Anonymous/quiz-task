@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Questions from './Questions';
 import { useDispatch, useSelector } from 'react-redux';
 import { moveNextAction, movePrevAction } from '../redux/question_reducer';
-import { pushAnswer } from '../hooks/setResult';
+import { pushAnswer } from '../Actions/setResult';
 import { Navigate } from 'react-router-dom';
 
 export default function App() {

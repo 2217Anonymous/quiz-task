@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import data,{answers} from '../data'
 import { startTestAction,moveNextAction } from '../redux/question_reducer'
 import { getServerData } from "../helper/helper";
 import { QUESTIONS } from "../redux/ApiUrl";

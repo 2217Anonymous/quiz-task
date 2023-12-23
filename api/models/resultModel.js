@@ -17,6 +17,10 @@ const resultModel = mongoose.Schema({
         type:String,
         default:'',
     },
+    userAnswer:{
+        type    : Array,
+        default : []
+    },
     createdAt :{
         type:Date,
         default:Date.now

@@ -6,6 +6,7 @@ import { resetResultAction } from '../redux/result_reducer';
 import { Link, Navigate } from 'react-router-dom';
 import { attemptQuestion, displayQuestionsWithAttempts, earnPoints, gradeResult } from '../helper/helper';
 import StarRating from './StarRating';
+import { publishResult } from '../Actions/setResult';
 
 export default function Result() {
     const dispatch = useDispatch()
@@ -21,6 +22,12 @@ export default function Result() {
         dispatch(resetResultAction())
     }
 
+    publishResult({
+        result,
+        attempts:attempt_qus,
+        points:earn_points,
+        achived:grade?"Pass":"Fail",
+    })
     if (result.length <= 0) {
         return <Navigate to={'/'} />
     }

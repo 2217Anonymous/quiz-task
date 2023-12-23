@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useFetchQestion } from '../hooks/FetchQuestion'
+import { useFetchQestion } from '../Actions/FetchQuestion'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateResult } from '../hooks/setResult'
+import { updateResult } from '../Actions/setResult'
 
 export default function Questions({onChecked}) {
     const dispatch = useDispatch()
