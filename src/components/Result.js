@@ -26,7 +26,7 @@ export default function Result() {
         result,
         attempts:attempt_qus,
         points:earn_points,
-        achived:grade?"Pass":"Fail",
+        achived:grade ? "Pass" : "Fail",
     })
     if (result.length <= 0) {
         return <Navigate to={'/'} />

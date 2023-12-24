@@ -18,8 +18,7 @@ export const updateResult = (index,checked) => async (dispatch) => {
     }
 } 
 
-export const publishResult = () => {
-    const {result} = resultData
+export const publishResult = (resultData) => {
     (async () => {
         try{
             await postServerData(RESULT,resultData,data => data)
